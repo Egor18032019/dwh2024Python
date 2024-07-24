@@ -3,7 +3,7 @@ import shutil
 import requests
 
 
-def download_file(URL, temp_dir):
+def download_file(URL, temp_dir, logger):
     # Отправляем GET-запрос и получаем содержимое файла
     response = requests.get(URL)
 
@@ -16,7 +16,7 @@ def download_file(URL, temp_dir):
         with open(temp_dir / 'archive.zip', 'wb') as file:
             file.write(response.content)
     else:
-        print('Ошибка при скачивании файла. Код статуса:', response.status_code)
+        logger.error(f'Ошибка при скачивании файла. Код статуса: {response.status_code}')
 
 
 def unzip_file(file_name, temp_dir):

@@ -4,8 +4,8 @@ from Settings import get_config
 
 class DBConnector:  # Класс для подключения к базе данных
     # Параметры подключения к базе данных
-    # host = get_config()["DB_HOST"]
-    host = "localhost"  # //TODO поменять если через docker-compose
+    host = get_config()["DB_HOST"]
+    # host = "localhost"  # //TODO поменять если через docker-compose
     port = get_config()["POSTGRES_PORT"]
     database = get_config()["POSTGRES_DB"]
     user = get_config()["POSTGRES_USER"]
