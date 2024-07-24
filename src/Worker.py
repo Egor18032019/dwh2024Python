@@ -1,6 +1,6 @@
 import csv
 
-from DBConnector import DBConnector
+from src.DBConnector import DBConnector
 
 
 def save_data(data):

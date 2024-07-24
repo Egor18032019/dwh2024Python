@@ -1,13 +1,14 @@
 import psycopg2
+from Settings import get_config
 
 
 class DBConnector:  # Класс для подключения к базе данных
     # Параметры подключения к базе данных
-    host = "db"
-    port = "5432"
-    database = "test_db"
-    user = "postgres"
-    password = "postgres"
+    host = get_config()["DB_HOST"]
+    port = get_config()["POSTGRES_PORT"]
+    database = get_config()["POSTGRES_DB"]
+    user = get_config()["POSTGRES_USER"]
+    password = get_config()["POSTGRES_PASSWORD"]
 
     # Создаем соединение
     connection = psycopg2.connect(host=host, port=port, database=database, user=user, password=password)
