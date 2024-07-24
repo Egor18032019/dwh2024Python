@@ -4,7 +4,8 @@ from Settings import get_config
 
 class DBConnector:  # Класс для подключения к базе данных
     # Параметры подключения к базе данных
-    host = get_config()["DB_HOST"]
+    # host = get_config()["DB_HOST"]
+    host = "localhost"  # //TODO поменять если через docker-compose
     port = get_config()["POSTGRES_PORT"]
     database = get_config()["POSTGRES_DB"]
     user = get_config()["POSTGRES_USER"]
@@ -22,13 +23,21 @@ class DBConnector:  # Класс для подключения к базе да�
     cursor.execute(init_table_query)
 
     init_users_query = """
-    SELECT 'CREATE ROLE read_user'
-    WHERE NOT EXISTS (SELECT FROM pg_catalog.pg_roles WHERE rolname = 'read_user');
-    ALTER USER read_user WITH PASSWORD 'pass';
-
-    SELECT 'CREATE ROLE write_user'
-    WHERE NOT EXISTS (SELECT FROM pg_catalog.pg_roles WHERE rolname = 'read_user');
-    ALTER USER write_user WITH PASSWORD 'pass' VALID UNTIL '2025-12-31';
+     DO $$
+        BEGIN
+            IF NOT EXISTS (SELECT 1 FROM pg_catalog.pg_roles WHERE rolname = 'read_user') THEN
+                CREATE ROLE read_user WITH LOGIN PASSWORD 'pass';
+        END IF;
+    END $$;
+    """
+    cursor.execute(init_users_query)
+    init_users_query = """
+    DO $$
+        BEGIN
+            IF NOT EXISTS (SELECT 1 FROM pg_catalog.pg_roles WHERE rolname = 'write_user') THEN
+                CREATE ROLE write_user WITH LOGIN PASSWORD 'pass';
+        END IF;
+    END $$;
     """
     cursor.execute(init_users_query)
 
