@@ -3,8 +3,6 @@ import psycopg2
 
 class DBConnector:  # Класс для подключения к базе данных
     # Параметры подключения к базе данных
-    # host = '127.0.0.1'
-    # host="0.0.0.0"
     host = "db"
     port = "5432"
     database = "test_db"

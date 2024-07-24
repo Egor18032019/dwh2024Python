@@ -4,24 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f5659ec-1e8e-4b96-8f6a-f5358445c221" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBConnector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBScreenShot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Qwest.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javaApp1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javaApp2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9f5659ec-1e8e-4b96-8f6a-f5358445c221" name="Changes" comment="feat: local save">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBConnecter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LoadService.py" beforeDir="false" afterPath="$PROJECT_DIR$/FileService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Worker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Worker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +90,20 @@
       <option name="presentableId" value="Default" />
       <updated>1721712929063</updated>
     </task>
+    <task id="LOCAL-00001" summary="feat: local save">
+      <option name="closed" value="true" />
+      <created>1721738698983</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1721738698983</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: local save" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: local save" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
